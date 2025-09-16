@@ -19,6 +19,24 @@ git config --global user.email "youremail@mail.com"
 ```
 
 ## 3. Hubungkan Git dengan GitHub (SSH)
+### Bash
+- git config --global user.name "yourname"
+- git config --global user.email "youremail@mail.com"  
+  (harus sama dengan email yang terdaftar di GitHub)
+- ssh-keygen -t ed25519 -C "youremail@mail.com"
+- SSH key tersimpan di `C:\Users\<username>\.ssh\id_ed25519.pub`
+
+### GitHub
+- Klik Profile Picture → **Settings**
+- Pilih **SSH and GPG keys** → **New SSH key**
+- Paste semua isi file `id_ed25519.pub` ke bagian **Key** → **Add SSH key**
+
+### Check di Bash
+- ssh -T git@github.com
+- Ketik `yes`
+
+
+
 Langkah-langkah membuat SSH key:
 ```bash
 ssh-keygen -t ed25519 -C "youremail@mail.com"
@@ -51,7 +69,7 @@ ssh -T git@github.com
    atau
    ```bash
    git add
-   ```.
+   ```
 6. Commit perubahan:
    ```bash
    git commit -m "pesan commit"
