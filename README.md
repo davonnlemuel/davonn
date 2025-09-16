@@ -20,29 +20,45 @@ git config --global user.email "youremail@mail.com"
 
 ## 3. Hubungkan Git dengan GitHub (SSH)
 Langkah-langkah membuat SSH key:
+```bash
 ssh-keygen -t ed25519 -C "youremail@mail.com"
+```
 
 Salin isi file id_ed25519.pub, lalu tambahkan ke GitHub:
 GitHub → Settings → SSH and GPG keys
 Klik New SSH key → paste isi key → Add SSH key
 
 Cek koneksi:
+```bash
 ssh -T git@github.com
+```
 
 ## 4. Workflow Dasar Git
-1. Buat repository di GitHub (pilih Public).
-2. Clone repository ke lokal:
+1. Buat repository di GitHub.
+2. Clone repository:
+   ```bash
    git clone git@github.com:username/reponame.git
-3. Masuk ke folder repo dan buka di VS Code.
-4. Buat file baru (misalnya README.md).
+   ```
+3. Pull:
+   ```bash
+   git pull origin main
+   ```
+4. Buka folder repository di Visual Studio Code dan buat file baru.
 5. Tambahkan file ke staging area:
+   ```bash
    git add filename
-   # atau
-   git add .
+   ```
+   atau
+   ```bash
+   git add
+   ```.
 6. Commit perubahan:
+   ```bash
    git commit -m "pesan commit"
-7. Push ke GitHub:
+   ```
+7. Push:
+   ```bash
    git push origin main
-
+   ```
 ## 5. Alternatif Menggunakan GitHub Desktop
 Jika ingin lebih mudah tanpa terminal, bisa pakai GitHub Desktop.
