@@ -35,22 +35,6 @@ git config --global user.email "youremail@mail.com"
 - ssh -T git@github.com
 - Ketik `yes`
 
-
-
-Langkah-langkah membuat SSH key:
-```bash
-ssh-keygen -t ed25519 -C "youremail@mail.com"
-```
-
-Salin isi file id_ed25519.pub, lalu tambahkan ke GitHub:
-GitHub → Settings → SSH and GPG keys
-Klik New SSH key → paste isi key → Add SSH key
-
-Cek koneksi:
-```bash
-ssh -T git@github.com
-```
-
 ## 4. Workflow Dasar Git
 1. Buat repository di GitHub.
 2. Clone repository:
@@ -78,5 +62,5 @@ ssh -T git@github.com
    ```bash
    git push origin main
    ```
-## 5. Alternatif Menggunakan GitHub Desktop
+## 5. Cara Alternatif
 Jika ingin lebih mudah tanpa terminal, bisa pakai GitHub Desktop.
