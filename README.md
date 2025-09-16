@@ -7,8 +7,9 @@ Sebelum mulai, pastikan sudah meng-install:
 - [GitHub](https://github.com) → buat akun terlebih dahulu
 
 Cek instalasi Git:
-```bash
+'''bash
 git --version
+'''
 
 ## 2. Konfigurasi Git
 Atur nama dan email (harus sama dengan email GitHub):
